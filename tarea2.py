@@ -18,7 +18,6 @@ print('En que fecha saliste del trabajo? Introduce los datos sin espacio')
 fecha_salida = input('Ej. 24-05-2011 23:44 \n')
 fecha_salida = datetime.datetime.strptime(fecha_salida, format)
 
-print(fecha_salida.time().hour)
 
 dias_semana = 0
 dias_fin_semana = 0
@@ -37,13 +36,22 @@ for x in range(0,(fecha_salida - fecha_entrada).days):
 		print('Dia de semana',dia)
 
 
-total = dias_semana + dias_fin_semana
+if fecha_entrada.date().weekday() >= 5:
+	gasto_horas_entrada = (24 - int(fecha_entrada.time().hour)) 
+else: 
+	gasto_horas_entrada = (24 - int(fecha_entrada.time().hour)) 
 
 
+if fecha_salida.date().weekday() >= 5:
+	gasto_horas_salida = int(fecha_salida.time().hour)
+else: 
+	gasto_horas_salida = int(fecha_salida.time().hour)
 
 
+total = gasto_horas_salida + gasto_horas_entrada + (dias_semana * 24) + (dias_fin_semana * 24)
 print('Los dias de la semana son ', dias_semana)
 print('Los dias del fin de semana son ', dias_fin_semana)
+print('El total de horas es : ', total)
 
 
 
