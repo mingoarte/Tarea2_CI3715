@@ -1,0 +1,14 @@
+Casos a considerar para las pruebas:
+
+1. InicioDeServicio < finDeServicio
+2. Tarifa >= 0
+3. Tarifa en bolívares y céntimos (float)
+4. 15 min <= finDeServicio - inicioDeServicio <= siete días
+5. TarifaDíasSemana != TarifaFinesSemana
+6. montoAPagar >= 0
+7. montoAPagar en bolívares y céntimos (float)
+8. Las tasas se cobran por horas, es decir, 15 min <= servicio <= 60 min
+   se cobra como una hora. Así, 15 min <= servicio <= 120 min son dos horas
+   a cobrar
+9. Establecer el dominio de calcularPrecio
+10. Escribir las esquinas y tal
