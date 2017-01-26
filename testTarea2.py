@@ -1,7 +1,8 @@
 '''
-Created on 26 ene. 2017
+Tarea 2
+Domingo Arteaga, 11-10058
+Edgar Silva, 11-10968
 
-@author: ejsr
 '''
 
 import unittest
